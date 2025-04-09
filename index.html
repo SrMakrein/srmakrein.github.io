@@ -8,36 +8,47 @@
 </head>
 <body>
 
-    <header class="header">
+    <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#" data-target="about">Sobre mí</a></li>
+                <li><a href="#" data-target="projects">Proyectos</a></li>
+                <li><a href="#" data-target="contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="section about">
+    <section id="about" class="section">
         <div class="container">
-            <h1>Sobre mí</h1>
-            <p>Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, y más.</p>
+            <h1 class="fade-in">Sobre mí</h1>
+            <div class="profile-container slide-up">
+                <h2>Juan Antonio Beato López</h2>
+                <p>Desarrollador Web con experiencia en tecnologías como PHP, Symfony, Docker y más.</p>
+                <h3>Tecnologías que domino:</h3>
+                <ul>
+                    <li>PHP</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Symfony</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="section projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h1>Mis Proyectos</h1>
+            <h1 class="fade-in">Mis Proyectos</h1>
             <div class="project-cards">
-                <div class="project-card">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto.</p>
+                <div class="project-card slide-up">
+                    <h3>App Shopping</h3>
+                    <p>Conecta clientes con mayoristas y facilita pedidos recurrentes.</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card slide-up">
                     <h3>Proyecto 2</h3>
                     <p>Descripción breve del proyecto.</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card slide-up">
                     <h3>Proyecto 3</h3>
                     <p>Descripción breve del proyecto.</p>
                 </div>
@@ -48,18 +59,23 @@
     <section id="contact" class="section contact">
         <div class="container">
             <h1>Contacto</h1>
-            <form action="#" method="post">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu correo" required>
-                <textarea placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+            <div class="contact-links">
+                <a href="mailto:illidanjuan@hotmail.com" class="contact-icon" title="Correo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo" />
+                    <span>Correo</span>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-antonio-beato-l%C3%B3pez-6183621b1/" class="contact-icon" target="_blank" title="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -8,11 +8,15 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    padding: 20px;
+    padding-bottom: 70px; /* Añadido para dar espacio al footer */
+    min-height: 100vh; /* Asegura que el contenido mínimo ocupe toda la altura de la pantalla */
 }
 
 header {
     background-color: #2c3e50;
-    padding: 20px;
+    padding: 15px 0;
+    text-align: center;
 }
 
 .navbar ul {
@@ -22,7 +26,7 @@ header {
 }
 
 .navbar li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .navbar a {
@@ -37,6 +41,7 @@ header {
 }
 
 .section {
+    display: none; /* Ocultamos las secciones por defecto */
     padding: 50px 0;
     text-align: center;
 }
@@ -52,6 +57,28 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2, h3 {
+    color: #3498db;
+}
+
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
 .project-cards {
     display: flex;
     justify-content: space-around;
@@ -65,21 +92,6 @@ h1 {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 16px;
 }
 
 button {
@@ -98,10 +110,14 @@ button:hover {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 20px;
     text-align: center;
+    z-index: 10; /* Asegura que el footer esté encima del contenido */
 }
 
 footer p {
@@ -117,4 +133,70 @@ footer p {
     .project-card {
         width: 80%;
     }
+}
+
+/* Animaciones de transición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Añadimos una clase visible para mostrar las secciones */
+.section.visible {
+    display: block; /* Hacemos que la sección sea visible */
+    opacity: 1;
+    visibility: visible; /* Sección visible */
+    animation: fadeIn 0.5s ease-in-out; /* Animación de desvanecimiento */
+}
+
+.project-cards .project-card, .profile-container {
+    animation: slideUp 0.6s ease-in-out; /* Animación para los elementos dentro de las secciones */
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-icon {
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.contact-icon span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+    color: #3498db;
 }
