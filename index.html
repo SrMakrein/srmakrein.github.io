@@ -1,79 +1,481 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
+    <title>Juan Antonio Beato López | Desarrollador Web</title>
+    <meta name="description" content="Portfolio de Juan Antonio Beato López, Desarrollador Web especializado en PHP, Drupal, HTML, CSS y arquitecturas web avanzadas.">
+    <!-- Fuentes Modernas: Outfit para titulares, Inter para cuerpo de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-effects">
+        <div class="bg-logo-overlay"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
 
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#" data-target="about">Sobre mí</a></li>
-                <li><a href="#" data-target="projects">Proyectos</a></li>
-                <li><a href="#" data-target="contact">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="navbar glass-effect">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <img src="assets/logo.png" alt="Logo de Casco Spartano" class="brand-logo">
+                <span>JABL.</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-item">Sobre mí</a></li>
+                    <li><a href="#experience" class="nav-item">Experiencia</a></li>
+                    <li><a href="#education" class="nav-item">Formación</a></li>
+                    <li><a href="#skills" class="nav-item">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-item">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-item btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h1 class="fade-in">Sobre mí</h1>
-            <div class="profile-container slide-up">
-                <h2>Juan Antonio Beato López</h2>
-                <p>Desarrollador Web con experiencia en tecnologías como PHP, Symfony, Docker y más.</p>
-                <h3>Tecnologías que domino:</h3>
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero-section observer-hidden">
+            <div class="container hero-content">
+                <span class="badge">Desarrollador Web</span>
+                <h1 class="hero-title">Hola, soy <br><span class="text-gradient">Juan Antonio Beato López</span></h1>
+                <p class="hero-subtitle">Especializado en PHP, HTML, CSS y frameworks como Drupal y Laravel. Transformo ideas en experiencias digitales robustas y eficientes.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Ver mis proyectos</a>
+                    <a href="#contact" class="btn btn-outline">Hablemos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section observer-hidden">
+            <div class="container">
+                <h2 class="section-title">Sobre <span class="text-gradient">mí</span></h2>
+                <div class="about-grid">
+                    <div class="glass-card about-personal">
+                        <h3>Perfil Personal</h3>
+                        <ul class="info-list">
+                            <li><span class="info-label">Edad:</span> 32 años (21/09/1993)</li>
+                            <li><span class="info-label">Teléfono:</span> +34 656 852 382</li>
+                            <li><span class="info-label">Email:</span> illidanjuan@hotmail.com</li>
+                        </ul>
+                        <div class="languages">
+                            <h4>Idiomas</h4>
+                            <div class="tags-container">
+                                <span class="tag">Castellano (Nativo)</span>
+                                <span class="tag">Inglés (Medio)</span>
+                                <span class="tag">Francés (Básico)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card about-competencies">
+                        <h3>Competencias Transversales</h3>
+                        <p class="text-muted">Busco la mejora continua y el trabajo en equipo, asumiendo responsabilidades tanto técnicas como organizativas.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">Responsabilidad</div>
+                            <div class="skill-item">Liderazgo</div>
+                            <div class="skill-item">Trabajo en Equipo</div>
+                            <div class="skill-item">Soporte a Cliente</div>
+                            <div class="skill-item">Gestión de Grupo</div>
+                            <div class="skill-item">Autonomía</div>
+                            <div class="skill-item">Estimación de Proyectos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section observer-hidden">
+            <div class="container">
+                <h2 class="section-title">Trayectoria <span class="text-gradient">Profesional</span></h2>
+                
+                <div class="timeline">
+                    <!-- Sopra Steria -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">5 años</div>
+                        <h3 class="timeline-title">Desarrollador y Mantenimiento Web</h3>
+                        <h4 class="timeline-company">Sopra Steria - Grupo Planeta</h4>
+                        <p class="timeline-desc">Mantenimiento y desarrollo de evolutivos en sitios web basados en Drupal (v8, v9, v10). Trabajando en 16 portales y proyectos multisite (IFP, ESDESIGN, VIU, EAE Barcelona, EAE Madrid, etc.).</p>
+                    </div>
+
+                    <!-- Drupal / Back / Laravel / Wordpress -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Experiencia Acumulada (Varios periodos)</div>
+                        <h3 class="timeline-title">Desarrollador Web Full Stack</h3>
+                        <h4 class="timeline-company">Varios Entornos</h4>
+                        <ul class="timeline-list">
+                            <li><strong>2 años en Drupal (v6, 7, 8):</strong> Uso de Docker, Composer, Docker-compose, Git y GitFlow.</li>
+                            <li><strong>3 meses en Backend Laravel:</strong> Proyecto Ionic basado en Laravel (últimas versiones).</li>
+                            <li><strong>3 meses en WordPress:</strong> Desarrollo y gestión en últimas versiones del CMS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Everis -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Bootcamp & Contratación</div>
+                        <h3 class="timeline-title">Desarrollador Bootcamp</h3>
+                        <h4 class="timeline-company">Everis (NTT Data)</h4>
+                        <p class="timeline-desc">Bootcamp intensivo donde perfeccioné mis conocimientos. Evaluado en PHP, MySQL, PLSQL, Spring Boot, Maven y Angular JS. Alcanzando los objetivos para mi contratación laboral directa.</p>
+                    </div>
+
+                    <!-- Prácticas -->
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">3 meses</div>
+                        <h3 class="timeline-title">Responsable Departamento Informática (Prácticas)</h3>
+                        <h4 class="timeline-company">MyC Consultores (Asesoría Legal)</h4>
+                        <p class="timeline-desc">Gestión integral del departamento de informática, trabajando directamente con diversos CMS como Wordpress y Drupal.</p>
+                    </div>
+                </div>
+
+                <div class="clients-section glass-card observer-hidden">
+                    <h3>Clientes Destacados</h3>
+                    <div class="tags-container">
+                        <span class="tag outline">Comisión Europea (BUILDUP)</span>
+                        <span class="tag outline">DATOSGOB</span>
+                        <span class="tag outline">RED.ES</span>
+                        <span class="tag outline">DAMM</span>
+                        <span class="tag outline">MÁSMÓVIL</span>
+                        <span class="tag outline">Vital Aire</span>
+                        <span class="tag outline">Junta de Andalucía</span>
+                        <span class="tag outline">Grupo Planeta</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section observer-hidden">
+            <div class="container">
+                <h2 class="section-title">Mi <span class="text-gradient">Formación</span></h2>
+                <div class="education-grid">
+                    <div class="glass-card edu-card">
+                        <div class="edu-icon">🎓</div>
+                        <h3>A.S.I.R.</h3>
+                        <h4>Técnico Superior de Administración de Sistemas Informáticos en Redes</h4>
+                        <p class="edu-place">I.E.S. Marqués de Comares</p>
+                        <div class="edu-tfg mt-4">
+                            <strong>Trabajo de Fin de Grado:</strong>
+                            <p>Desarrollo inicial de una página web de contactos para una agencia de viajes. Diseño de logotipo e interfaz visual, gestionando las necesidades directamente con el cliente.</p>
+                        </div>
+                    </div>
+                    <div class="glass-card edu-card">
+                        <div class="edu-icon">📚</div>
+                        <h3>Bachiller</h3>
+                        <h4>Título de Bachiller (Ciencias Sociales)</h4>
+                        <p class="edu-place">I.E.S. Marqués de Comares</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section observer-hidden">
+            <div class="container">
+                <h2 class="section-title">Hábilidades <span class="text-gradient">Técnicas</span></h2>
+                <div class="skills-bars-container glass-card">
+                    <!-- Advanced -->
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">PHP</span>
+                            <span class="skill-level">Avanzado</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-level">Avanzado</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-level">Avanzado</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <!-- Medium -->
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-level">Medio</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-level">Medio</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">JQuery</span>
+                            <span class="skill-level">Medio</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span class="skill-name">PLSQL</span>
+                            <span class="skill-level">Medio</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section observer-hidden">
+            <div class="container">
+                <h2 class="section-title">Mis <span class="text-gradient">Proyectos</span></h2>
+                <p class="section-description">Un vistazo a algunos de mis trabajos recientes. Pronto añadiré más detalles de mis proyectos elaborados.</p>
+                <div class="projects-grid">
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>App Stock Calendar</h3>
+                            <p>Plataforma B2B para compra/venta y gestión integral de pedidos al por mayor (proveedores y distribuidores).</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-stock-calendar">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>Arquetipo OS</h3>
+                            <p>Sistema operativo modular híbrido escrito en Rust (no_std) con VFS y shell interactiva.</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-arquetipo">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>Brand Environment Status (Drupal 11)</h3>
+                            <p>Módulo custom para monitorizar ramas y versiones desplegadas en entornos multisite (QA, UAT, PRE, PRO).</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-brand-env">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>LobbiX (Clon de Reddit)</h3>
+                            <p>Clon minimalista de Reddit desarrollado bajo un entorno reproducible con Laravel 11 y DDEV.</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-lobbix">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Godot Project Liquid -->
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>Project Liquid (Godot)</h3>
+                            <p>Desarrollo de un juego de plataformas 3D desde cero en el motor gráfico Godot.</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-liquid">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section observer-hidden">
+            <div class="container text-center">
+                <h2 class="section-title">Ponte en <span class="text-gradient">Contacto</span></h2>
+                <p class="section-description mb-8">¿Interesado en mi perfil o en alguna colaboración? Escríbeme y charlamos.</p>
+                
+                <div class="contact-links glass-card d-inline-block">
+                    <a href="mailto:illidanjuan@hotmail.com" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        illidanjuan@hotmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-antonio-beato-l%C3%B3pez-6183621b1/" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Arquetipo OS -->
+    <div id="modal-arquetipo" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Arquetipo OS</h3>
+            <div class="modal-body">
+                <p>Sistema operativo modular escrito en Rust. Arquitectura híbrida diseñada para desarrollo rápido (simulación en host) y despliegue nativo (<code>no_std</code>).</p>
+                
+                <h4>Arquitectura</h4>
                 <ul>
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Symfony</li>
-                    <li>Docker</li>
+                    <li><strong>arquetipo_core:</strong> Núcleo portable (<code>no_std</code>). Contiene la lógica del sistema, VFS y gestión de comandos.</li>
+                    <li><strong>arquetipo_host:</strong> Entorno de simulación para Windows/Linux/macOS. Ejecuta el núcleo sobre el OS anfitrión.</li>
+                </ul>
+
+                <h4>Funcionalidades Actuales</h4>
+                <ul>
+                    <li><strong>Shell Interactiva:</strong> Intérprete de comandos básico.</li>
+                    <li><strong>Sistema de Archivos Virtual (VFS):</strong> Sistema de archivos en memoria con soporte para:
+                        <ul>
+                            <li>Navegación: <code>cd</code>, <code>ls</code> (con estadísticas).</li>
+                            <li>Gestión: <code>mkdir</code>, <code>touch</code>, <code>cp</code>, <code>mv</code>, <code>delete</code>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Multi-idioma:</strong> Soporte dinámico para Inglés y Español (<code>lang &lt;en|es&gt;</code>).</li>
+                </ul>
+
+                <h4>Ejecución (Simulación)</h4>
+                <p>Requisitos: Necesitas tener instalado Rust y Cargo.</p>
+                <div class="code-block">
+                    <code>cargo run -p arquetipo_host</code>
+                </div>
+
+                <h4>Licencia</h4>
+                <p>MIT</p>
+                <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Brand Environment Status -->
+    <div id="modal-brand-env" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Brand Environment Status</h3>
+            <div class="modal-body">
+                <p>Módulo custom limpio y extensible para <strong>Drupal 11</strong>. Genera una matriz de información (Marcas × Entornos: QA, UAT, PRE, PRO) permitiendo visualizar la rama y la versión desplegada en cada nodo de una arquitectura multisite.</p>
+                
+                <h4>Características Principales</h4>
+                <ul>
+                    <li>Lectura de estado de despliegue en tiempo real.</li>
+                    <li>Soporte nativo para integraciones con repositorios (ej. GitLab) mediante tokens de acceso.</li>
+                    <li>Configuración centralizada en <code>settings.local.php</code> para mayor seguridad.</li>
+                </ul>
+
+                <h4>Configuración de Ejemplo (<code>settings.local.php</code>)</h4>
+                <div class="code-block">
+<pre><code>$settings['brand_env_status_auth'] = [ 
+  'git.tudominio.com' => [ // Host remoto 
+    'headers' => [ 
+      // Opción 1: cabecera típica de GitLab con token personal 
+      'PRIVATE-TOKEN' => 'glpat-XXXXXXXXXXXXXXXXXXXX',
+      
+      // Opción 2: alternativa con Authorization Bearer
+      // 'Authorization' => 'Bearer GLPAT_AQUI_TU_TOKEN',
+    ],
+    // Tiempo máximo de espera de la petición (segundos)
+    'timeout' => 20,
+    
+    // Validación de certificados SSL/TLS
+    'verify' => true,
+  ], 
+];</code></pre>
+                </div>
+                <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal LobbiX -->
+    <div id="modal-lobbix" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">LobbiX (Laravel 11 + DDEV)</h3>
+            <div class="modal-body">
+                <p>Un clon de Reddit enfocado en la simplicidad, ofreciendo un entorno totalmente reproducible utilizando <strong>DDEV</strong> y <strong>Laravel 11</strong>.</p>
+                
+                <h4>Requisitos</h4>
+                <ul>
+                    <li>Docker Desktop (con WSL2 en Windows, activar integración WSL para la distro).</li>
+                    <li>DDEV &ge; 1.23</li>
+                </ul>
+
+                <h4>Arranque Rápido</h4>
+                <p>Sigue estos pasos para levantar el entorno de desarrollo paso a paso:</p>
+                <div class="code-block">
+<pre><code># 1) Clonar
+git clone &lt;URL_REPO&gt; && cd LobbiX
+
+# 2) Iniciar ddev
+ddev start
+
+# 3) Instalar dependencias (si no existen)
+ddev exec -w /var/www/html/src composer install
+
+# 4) Crear .env y APP_KEY
+ddev exec -w /var/www/html/src cp -n .env.example .env
+ddev exec -w /var/www/html/src php artisan key:generate
+
+# 5) (Opcional) Sesiones en archivos para dev
+# En .env: SESSION_DRIVER=file
+ddev exec -w /var/www/html/src mkdir -p storage/framework/sessions
+
+# 6) Migraciones (si procede)
+ddev exec -w /var/www/html/src php artisan migrate</code></pre>
+                </div>
+                <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal App Stock Calendar -->
+    <div id="modal-stock-calendar" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">App Stock Calendar</h3>
+            <div class="modal-body">
+                <p>Aplicación web B2B orientada a la compra y venta de pedidos al por mayor, diseñada específicamente para optimizar la comunicación y logística entre proveedores y distribuidores.</p>
+                
+                <h4>Desarrollo Colaborativo</h4>
+                <p>Este proyecto se llevó a cabo <strong>en conjunto con un equipo multidisciplinar de compañeros</strong>, donde gestionamos los requerimientos del cliente, planificamos hitos de entrega y trabajamos coordinados mediante metodologías ágiles y control de versiones (Git).</p>
+
+                <h4>Funcionalidades Clave</h4>
+                <ul>
+                    <li><strong>Gestión de Calendario ("Stock Calendar"):</strong> Sistema de planificación de envíos y reposición en el tiempo basado en las demandas mayoristas recurrentes.</li>
+                    <li><strong>Roles y Permisos:</strong> Interfaces y flujos adaptados dependiendo si el usuario accede como proveedor (control de stock, catálogos) o como distribuidor (solicitudes de presupuestos, pedidos en masa).</li>
+                    <li><strong>Arquitectura Escalable:</strong> Diseñada para soportar altos volúmenes de transacciones e inventariado.</li>
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h1 class="fade-in">Mis Proyectos</h1>
-            <div class="project-cards">
-                <div class="project-card slide-up">
-                    <h3>App Shopping</h3>
-                    <p>Conecta clientes con mayoristas y facilita pedidos recurrentes.</p>
-                </div>
-                <div class="project-card slide-up">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </div>
-                <div class="project-card slide-up">
-                    <h3>Proyecto 3</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </div>
+    <!-- Modal Project Liquid -->
+    <div id="modal-liquid" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Project Liquid</h3>
+            <div class="modal-body">
+                <p>Juego de <strong>plataformas en 3D</strong> actualmente en desarrollo activo.</p>
+                
+                <h4>Desarrollado en Godot</h4>
+                <p>Implementado íntegramente desde cero utilizando el motor gráfico libre y de código abierto <strong>Godot Engine</strong>.</p>
+                
+                <h4>Aspectos Destacados</h4>
+                <ul>
+                    <li><strong>Desarrollo "From Scratch":</strong> Diseño y programación íntegra de la lógica principal, sin depender de plantillas prefabricadas.</li>
+                    <li><strong>Lógica de Movimiento 3D:</strong> Control preciso de saltos, inercias y físicas de un personaje de plataformas tridimensional.</li>
+                    <li><strong>Estado Actual:</strong> En desarrollo continuo para implementar mecánicas avanzadas, gestión de cámara y coleccionables.</li>
+                </ul>
+                <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="section contact">
+    <footer class="glass-footer">
         <div class="container">
-            <h1>Contacto</h1>
-            <div class="contact-links">
-                <a href="mailto:illidanjuan@hotmail.com" class="contact-icon" title="Correo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo" />
-                    <span>Correo</span>
-                </a>
-                <a href="https://www.linkedin.com/in/juan-antonio-beato-l%C3%B3pez-6183621b1/" class="contact-icon" target="_blank" title="LinkedIn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-                    <span>LinkedIn</span>
-                </a>
-            </div>
+            <p>&copy; 2026 Juan Antonio Beato López. Todos los derechos reservados.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
     </footer>
 
     <script src="scripts.js"></script>
