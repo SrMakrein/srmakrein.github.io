@@ -285,6 +285,22 @@
                             <a href="#" class="project-link open-modal" data-modal="modal-liquid">Ver detalles &rarr;</a>
                         </div>
                     </div>
+                    <!-- Audio Visualizer Pro -->
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>Audio Visualizer Pro</h3>
+                            <p>Visualizador de audio interactivo con efectos visuales dinámicos y soporte para capturar audio del sistema.</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-audio-visualizer">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Control por Voz -->
+                    <div class="glass-card project-card hover-glow">
+                        <div class="project-content">
+                            <h3>Control por Voz - Macro Launcher Pro</h3>
+                            <p>Aplicación portable que permite controlar tu computadora mediante comandos de voz y atajos de teclado globales.</p>
+                            <a href="#" class="project-link open-modal" data-modal="modal-control-voz">Ver detalles &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -468,6 +484,71 @@ ddev exec -w /var/www/html/src php artisan migrate</code></pre>
                     <li><strong>Estado Actual:</strong> En desarrollo continuo para implementar mecánicas avanzadas, gestión de cámara y coleccionables.</li>
                 </ul>
                 <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Audio Visualizer Pro -->
+    <div id="modal-audio-visualizer" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Audio Visualizer Pro - Mouth Effect</h3>
+            <div class="modal-body">
+                <p>Visualizador de audio interactivo que reacciona al sonido con efectos visuales dinámicos personalizables.</p>
+                
+                <h4>Estado de Desarrollo</h4>
+                <ul>
+                    <li>✅ Visualización básica funcionando.</li>
+                    <li>✅ Menú interactivo básico.</li>
+                    <li>⏳ Selector de aplicaciones y efecto de boca completa (próximamente).</li>
+                </ul>
+
+                <h4>Funcionalidades y Controles</h4>
+                <ul>
+                    <li><strong>Visuales:</strong> Ajuste de sensibilidad, cantidad de barras, simetría y degradado.</li>
+                    <li><strong>Atajos de teclado:</strong> <code>↑/↓</code> (Sensibilidad), <code>+/-</code> (Barras), <code>S</code> (Simetría), <code>G</code> (Degradado), <code>M</code> (Menú).</li>
+                </ul>
+
+                <h4>Configuración de Audio</h4>
+                <p>Soporte para cambiar de dispositivo editando <code>audio_visualizer_config.json</code>. Para aislar el audio de una aplicación específica de manera temporal, se utilizan integraciones con <strong>VB-Audio Cable</strong>.</p>
+                <div class="code-block">
+                    <code>start.bat</code>
+                </div>
+                
+                <div class="badge" style="margin-top: 1rem;">Work in Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Control por Voz -->
+    <div id="modal-control-voz" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Control por Voz - Macro Launcher Pro</h3>
+            <div class="modal-body">
+                <p>Aplicación portable para Windows que permite controlar tu computadora mediante <strong>comandos de voz</strong> y <strong>atajos de teclado</strong> personalizables.</p>
+                
+                <h4>Características Principales</h4>
+                <ul>
+                    <li><strong>Reconocimiento de Voz:</strong> Funciona en español. Utiliza una palabra de activación (por defecto "asistente") para escuchar comandos solo cuando lo desees.</li>
+                    <li><strong>Atajos de Teclado Globales:</strong> Cada macro puede tener un atajo asignado para ejecución instantánea sin necesidad de hablar, incluso con la aplicación minimizada.</li>
+                    <li><strong>Gestión de Macros:</strong> Interfaz gráfica amigable con selector de archivos. Permite ejecutar programas, scripts o comandos del sistema de forma persistente.</li>
+                </ul>
+
+                <h4>Instalación y Uso</h4>
+                <p>Requiere tener <a href="https://www.python.org/downloads/" target="_blank" style="color: var(--primary);">Python</a> instalado en el sistema (marcando "Add Python to PATH" durante la instalación). Tras descargar el programa, cuenta con asistentes de inicio:</p>
+                <div class="code-block">
+                    <code>launcher.bat</code> (Instalación de dependencias e inicio) <br>
+                    <code>iniciar.bat</code> (Lanzamiento directo)
+                </div>
+
+                <h4>Ejemplos de Macros Avanzados</h4>
+                <ul>
+                    <li><strong>Ejecutar Scripts:</strong> Comando: <code>C:\Scripts\backup.bat</code> | Atajo: <code>Ctrl+Shift+B</code></li>
+                    <li><strong>Abrir Carpetas:</strong> Comando: <code>explorer.exe C:\Proyectos</code> | Atajo: <code>Ctrl+Alt+P</code></li>
+                    <li><strong>Comandos del Sistema:</strong> Comando: <code>shutdown /s /t 60</code> (apagar la PC).</li>
+                </ul>
+                <div class="badge" style="margin-top: 1rem;">Completado</div>
             </div>
         </div>
     </div>
