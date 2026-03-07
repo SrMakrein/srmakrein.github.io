@@ -515,6 +515,8 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 .edu-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--accent-primary);
+  display: inline-flex;
 }
 
 .edu-card h3 {
@@ -637,32 +639,43 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
    Contact Section
    ========================================================================== */
 .contact-links {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: var(--border-radius-lg);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 600px) {
   .contact-links {
     flex-direction: row;
     justify-content: center;
+    padding: 3rem;
   }
 }
 
 .contact-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 1rem 2rem;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--surface-border);
   border-radius: var(--border-radius-sm);
   transition: var(--transition);
+  max-width: 100%;
+}
+
+.contact-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-btn:hover {
@@ -773,6 +786,20 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .modal-body ul ul li::before {
   content: "-";
+}
+
+.modal-body ul.custom-icon-list li::before {
+  display: none;
+}
+
+.modal-body ul.custom-icon-list li {
+  display: flex;
+  align-items: center;
+}
+
+.inline-icon {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .code-block {

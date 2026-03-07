@@ -164,7 +164,9 @@
                 <h2 class="section-title">Mi <span class="text-gradient">Formación</span></h2>
                 <div class="education-grid">
                     <div class="glass-card edu-card">
-                        <div class="edu-icon">🎓</div>
+                        <div class="edu-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        </div>
                         <h3>A.S.I.R.</h3>
                         <h4>Técnico Superior de Administración de Sistemas Informáticos en Redes</h4>
                         <p class="edu-place">I.E.S. Marqués de Comares</p>
@@ -174,7 +176,9 @@
                         </div>
                     </div>
                     <div class="glass-card edu-card">
-                        <div class="edu-icon">📚</div>
+                        <div class="edu-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        </div>
                         <h3>Bachiller</h3>
                         <h4>Título de Bachiller (Ciencias Sociales)</h4>
                         <p class="edu-place">I.E.S. Marqués de Comares</p>
@@ -311,14 +315,14 @@
                 <h2 class="section-title">Ponte en <span class="text-gradient">Contacto</span></h2>
                 <p class="section-description mb-8">¿Interesado en mi perfil o en alguna colaboración? Escríbeme y charlamos.</p>
                 
-                <div class="contact-links glass-card d-inline-block">
+                <div class="contact-links glass-card">
                     <a href="mailto:illidanjuan@hotmail.com" class="contact-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        illidanjuan@hotmail.com
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>illidanjuan@hotmail.com</span>
                     </a>
                     <a href="https://www.linkedin.com/in/juan-antonio-beato-l%C3%B3pez-6183621b1/" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        LinkedIn
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -497,10 +501,10 @@ ddev exec -w /var/www/html/src php artisan migrate</code></pre>
                 <p>Visualizador de audio interactivo que reacciona al sonido con efectos visuales dinámicos personalizables.</p>
                 
                 <h4>Estado de Desarrollo</h4>
-                <ul>
-                    <li>✅ Visualización básica funcionando.</li>
-                    <li>✅ Menú interactivo básico.</li>
-                    <li>⏳ Selector de aplicaciones y efecto de boca completa (próximamente).</li>
+                <ul class="custom-icon-list">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><polyline points="20 6 9 17 4 12"></polyline></svg> Visualización básica funcionando.</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><polyline points="20 6 9 17 4 12"></polyline></svg> Menú interactivo básico.</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M5.5 5h13a1 1 0 0 1 0.5 1.5L14 12l5 5.5a1 1 0 0 1-0.5 1.5h-13a1 1 0 0 1-0.5-1.5L10 12 5 6.5A1 1 0 0 1 5.5 5z"></path></svg> Selector de aplicaciones y efecto de boca completa (próximamente).</li>
                 </ul>
 
                 <h4>Funcionalidades y Controles</h4>
